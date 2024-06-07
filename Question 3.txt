@@ -1,0 +1,55 @@
+Question 3:  Use a nested ternary operator to check that a number is positive, negative or zero. You have to print
+“positive” if the number is positive and similarly for negative and zero also.
+
+
+Solution: 
+  
+    You can use a nested ternary operator to check if a number is positive, negative, or zero in JavaScript. Here’s how you can achieve this:
+
+### Syntax
+The nested ternary operator can be structured as follows:
+
+javascript
+condition1 ? expressionIfTrue1 : (condition2 ? expressionIfTrue2 : expressionIfFalse2);
+
+
+In this case, we have three conditions:
+1. If the number is greater than 0 (positive).
+2. If the number is less than 0 (negative).
+3. If the number is 0.
+
+### Example Code
+Here's the JavaScript code to check whether a number is positive, negative, or zero using a nested ternary operator:
+
+javascript
+let number = 0; // You can change this number to test with other values
+
+// Using nested ternary operator to determine if the number is positive, negative, or zero
+let result = (number > 0) ? "positive" : (number < 0) ? "negative" : "zero";
+
+console.log(`The number is ${result}.`);
+
+
+### Explanation
+- `(number > 0)`: This condition checks if the number is greater than 0. If true, it returns "positive".
+- If the number is not greater than 0, the next condition `(number < 0)` is checked.
+- `(number < 0)`: This condition checks if the number is less than 0. If true, it returns "negative".
+- If neither of the above conditions is true, the number must be 0, so it returns "zero".
+
+### Example Output
+- For `number = 5`, the output will be:
+  
+  The number is positive.
+  
+
+- For `number = -3`, the output will be:
+  
+  The number is negative.
+  
+
+- For `number = 0`, the output will be:
+  
+  The number is zero.
+  
+
+This approach efficiently checks and categorizes the number into positive, negative, or zero using a nested ternary operator.

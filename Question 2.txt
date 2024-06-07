@@ -1,0 +1,56 @@
+Question 2 : Describe the usage of the comma operator in JavaScript and provide an example.
+
+Solutions:   
+              
+          The comma operator in JavaScript evaluates each of its operands (from left to right) and returns the value of the last operand. It is often used in situations where multiple expressions need to be evaluated but only the result of the final expression is used.
+
+### Syntax
+javascript
+expression1, expression2, expression3, ... , expressionN
+
+Each expression is evaluated, but only the value of the last expression (`expressionN`) is returned.
+
+### Usage
+The comma operator can be useful in various scenarios, such as:
+- For initializing multiple variables in a `for` loop.
+- For combining multiple expressions into a single expression.
+
+### Example
+Here's an example that demonstrates the use of the comma operator in a `for` loop:
+
+javascript
+for (let i = 0, j = 10; i < 5; i++, j--) {
+    console.log(`i: ${i}, j: ${j}`);
+}
+
+
+### Explanation
+- `let i = 0, j = 10`: This initializes two variables, `i` and `j`.
+- `i < 5`: This is the loop condition.
+- `i++, j--`: This is the expression that gets evaluated after each iteration of the loop. The comma operator allows both `i` and `j` to be updated in a single statement.
+- `console.log(`i: ${i}, j: ${j}`)`: This prints the values of `i` and `j` during each iteration.
+
+### Example Output
+
+i: 0, j: 10
+i: 1, j: 9
+i: 2, j: 8
+i: 3, j: 7
+i: 4, j: 6
+
+
+### Another Example
+Using the comma operator to evaluate multiple expressions in a single statement:
+
+javascript
+let x = 1;
+let y = (x++, x + 2, x * 3);
+console.log(y); // Output: 6
+
+
+### Explanation
+- `x++` increments `x` to 2 but the value of `x++` is 1 (post-increment).
+- `x + 2` evaluates to 4.
+- `x * 3` evaluates to 6 and is the value assigned to `y` because it is the last expression in the comma-separated list.
+
+In summary, the comma operator is a way to include multiple expressions where only one is expected, with the result being the value of the last expression in the list.

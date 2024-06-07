@@ -1,0 +1,43 @@
+Question 4: Use a ternary operator to check that a person is eligible to vote or not by checking his age. If the age of the
+person is less than 18 then “You cannot vote” should be logged else “You can vote” should be logged.
+
+
+Solutions: 
+  
+     You can use a ternary operator in JavaScript to check if a person is eligible to vote based on their age. If the person's age is less than 18, it should log "You cannot vote"; otherwise, it should log "You can vote".
+
+Here's how you can do it:
+
+javascript
+let age = 17; // You can change this value to test with other ages
+
+// Using ternary operator to determine if the person can vote
+let eligibility = (age < 18) ? "You cannot vote" : "You can vote";
+
+console.log(eligibility);
+
+
+### Explanation
+- `(age < 18)`: This condition checks if the age is less than 18.
+- If the condition is true (the age is less than 18), it returns "You cannot vote".
+- If the condition is false (the age is 18 or older), it returns "You can vote".
+- The result is stored in the variable `eligibility`.
+- The `console.log` statement prints the eligibility message.
+
+### Example Output
+- For `age = 17`, the output will be:
+  
+  You cannot vote
+  
+
+- For `age = 18`, the output will be:
+  
+  You can vote
+  
+
+- For `age = 25`, the output will be:
+  
+  You can vote
+  
+
+This way, the ternary operator provides a concise and readable way to handle the voting eligibility check based on the person's age.

@@ -1,0 +1,50 @@
+Question 1:  Explain the usage of ternary operator with syntax and write a program to check whether the number is even or odd using the ternary operator.
+
+Solution:   
+
+
+
+The ternary operator in JavaScript is a compact way to perform conditional operations. It is the only operator in JavaScript that takes three operands. The syntax for the ternary operator is:
+
+javascript
+condition ? expressionIfTrue : expressionIfFalse;
+
+
+- condition: This is the condition to be evaluated.
+- expressionIfTrue: This is the expression to be executed if the condition is true.
+- expressionIfFalse: This is the expression to be executed if the condition is false.
+
+Here's a step-by-step example of using the ternary operator to check if a number is even or odd in JavaScript:
+
+1. Define the number you want to check.
+2. Use the ternary operator to check the condition (whether the number is even or odd).
+3. Print the result.
+
+javascript
+let number = 4; // You can change this number to test with other values
+
+// Using the ternary operator to check if the number is even or odd
+let result = (number % 2 === 0) ? "even" : "odd";
+
+console.log(`The number ${number} is ${result}.`);
+
+
+### Explanation:
+- `number % 2 === 0`: This condition checks if the remainder of `number` divided by 2 is zero. If it is, the number is even; otherwise, it is odd.
+- If the condition is true (`number` is even), `expressionIfTrue` ("even") is returned.
+- If the condition is false (`number` is odd), `expressionIfFalse` ("odd") is returned.
+- The result is stored in the variable `result`.
+- The `console.log` statement prints out whether the number is even or odd.
+
+### Example Output:
+For `number = 4`, the output will be:
+
+The number 4 is even.
+
+
+For `number = 5`, the output will be:
+
+The number 5 is odd.
+
+
+This way, the ternary operator allows for a concise and readable way to handle simple conditional checks and assignments in a single line of code.
